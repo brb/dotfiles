@@ -1,0 +1,9 @@
+[submodule "bundle/command-t.vim"]
+	path = bundle/command-t.vim
+	url = https://github.com/wincent/Command-T
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
