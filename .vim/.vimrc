@@ -1,3 +1,7 @@
+" Pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
 " Global
 set history=9999
 set enc=utf-8
@@ -110,6 +114,3 @@ map <Leader>sw :SessionSave<cr>
 
 " Commant-T
 set wildignore=*.beam,.git,*.png,*.css,priv/*
-
-" Pathogen
-call pathogen#infect()
