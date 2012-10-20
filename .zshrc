@@ -48,3 +48,5 @@ ssh-reagent () {
     done
     echo Cannot find ssh agent - maybe you should reconnect and forward it?
 }
+
+export ERL_LIBS=$ERL_LIBS:/home/martynas/sandbox
