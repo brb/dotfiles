@@ -49,4 +49,6 @@ ssh-reagent () {
     echo Cannot find ssh agent - maybe you should reconnect and forward it?
 }
 
-export ERL_LIBS=$ERL_LIBS:/home/martynas/sandbox
+export ERL_LIBS=/home/martynas/sandbox/erlang
+
+source /home/martynas/.rvm/scripts/rvm
