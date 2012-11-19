@@ -113,4 +113,4 @@ map <Leader>sl :SessionList<cr>
 map <Leader>sw :SessionSave<cr>
 
 " Commant-T
-set wildignore=*.beam,.git,*.png,*.css,priv/*
+set wildignore=*.beam,.git,*.png,*.css,deps/*
