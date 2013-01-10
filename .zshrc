@@ -15,6 +15,9 @@ alias -s gz='tar -xzfv'
 alias -s bz2='tar -xjvf'
 alias -s erl=$EDITOR
 
+alias -g ecd='cd ~/sandbox/erlang'
+alias -g scd='cd ~/sandbox/sumup'
+
 typeset -g -A key
 bindkey '^?' backward-delete-char
 bindkey '^[[7~' beginning-of-line
@@ -52,3 +55,11 @@ ssh-reagent () {
 export ERL_LIBS=/home/martynas/sandbox/erlang
 
 source /home/martynas/.rvm/scripts/rvm
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PERL_LOCAL_LIB_ROOT="/home/martynas/perl5";
+export PERL_MB_OPT="--install_base /home/martynas/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/martynas/perl5";
+export PERL5LIB="/home/martynas/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/martynas/perl5/lib/perl5";
+export PATH="/home/martynas/perl5/bin:$PATH";
