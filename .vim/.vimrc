@@ -18,12 +18,32 @@ set mouse=a
 set number
 set expandtab
 set textwidth=79
+set colorcolumn=80
 
 set autoindent
+set smartindent
 set showmatch
 set nomodeline
-set nohlsearch
 set wrap
+
+set list
+
+"set nohlsearch
+set incsearch
+set smartcase
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+set laststatus=2
+set ruler
+set showcmd
+set wildmenu
+
+set scrolloff=1
+set sidescrolloff=5
+set display+=lastline
 
 map <F8> <Esc>:w<cr>
 imap <F8> <Esc>:w<cr>i
