@@ -90,6 +90,11 @@ map! <D-7> <C-O>:tabn 7<CR>
 map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
 
+" highligh trailing whitespaces and tabs
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
 set guifont=Monospace\ 9
 set enc=utf-8
 set background=dark
