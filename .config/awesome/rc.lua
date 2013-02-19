@@ -9,6 +9,17 @@ require("naughty")
 
 require("vicious")
 
+
+-- local volwidget = widget({ type = "textbox" })
+-- vicious.register(volwidget, vicious.widgets.volume,
+--          '<span font="Terminus 8">$2 $1%</span>',
+--         2, "Master")
+-- volwidget:buttons(awful.util.table.join(
+--              awful.button({ }, 1, volume.mixer),
+--              awful.button({ }, 3, volume.toggle),
+--              awful.button({ }, 4, volume.increase),
+--              awful.button({ }, 5, volume.decrease)))
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -108,6 +119,10 @@ mytextclock = awful.widget.textclock({ align = "right" })
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
+netwidget = widget({ type = "textbox" })
+vicious.register(netwidget, vicious.widgets.net,
+    '<span color="#CC9393">${eth0 down_kb}</span> <span color="#7F9F7F">${eth0 up_kb}</span>', 3)
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -184,6 +199,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        netwidget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -392,7 +408,7 @@ function run_once(prg,arg_string,pname,screen)
        pname = prg
     end
 
-    if not arg_string then 
+    if not arg_string then
         awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. "' || (" .. prg .. ")",screen)
     else
         awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. "' || (" .. prg .. " " .. arg_string .. ")",screen)
@@ -402,4 +418,3 @@ end
 run_once("gnome-settings-daemon")
 run_once("xcalib", "/home/martynas/.config/colorprofile.icc")
 run_once("nm-applet")
-run_once("xxkb")
