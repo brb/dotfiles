@@ -13,7 +13,6 @@ alias -s pdf=evince
 
 alias -s gz='tar -xzfv'
 alias -s bz2='tar -xjvf'
-alias -s erl=$EDITOR
 
 alias -g ecd='cd ~/sandbox/erlang'
 alias -g scd='cd ~/sandbox/sumup'
@@ -63,3 +62,5 @@ export PERL_MB_OPT="--install_base /home/martynas/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/martynas/perl5";
 export PERL5LIB="/home/martynas/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/martynas/perl5/lib/perl5";
 export PATH="/home/martynas/perl5/bin:$PATH";
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
