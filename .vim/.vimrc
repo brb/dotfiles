@@ -139,3 +139,6 @@ map <Leader>sw :SessionSave<cr>
 
 " Commant-T
 set wildignore=*.beam,.git,*.png,*.css,deps/*
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
