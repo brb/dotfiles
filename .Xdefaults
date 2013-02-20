@@ -23,10 +23,11 @@ URxvt.lineSpace: 0
 ! Fonts
 URxvt.allow_bold: false
 /* URxvt.font: -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Monospace:pixelsize=13
-URxvt*boldFont: xft:Monospace:pixelsize=13
+! URxvt*font: xft:Monospace:pixelsize=14
+! URxvt*boldFont: xft:Monospace:pixelsize=14
+URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=15
+! URxvt*boldFont: xft:SourceCodePro-Medium:pixelsize=15
 ! URxvt.font: xft:DejaVu Sans Mono-8
-
 ! Fix font space
 URxvt*letterSpace: -1
 
