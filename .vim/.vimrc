@@ -142,3 +142,12 @@ set wildignore=*.beam,.git,*.png,*.css,deps/*
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
+
+" PlantUML
+let g:plantuml_executable_script='java -jar $HOME/sandbox/temp/plantuml.jar'
+
+nnoremap <F5> :w<CR> :make<CR>
+inoremap <F5> <Esc>:w<CR>:make<CR>
+vnoremap <F5> :<C-U>:w<CR>:make<CR>
+
+let g:pad_dir = '/tmp/test'

@@ -9,7 +9,7 @@
 -- {{{ Main
 theme = {}
 -- theme.wallpaper_cmd = { "awsetbg -f /usr/share/awesome/themes/zenburn/zenburn-background.png" }
-theme.wallpaper_cmd = { "awsetbg -c /home/martynas/Downloads/cerro.jpg" }
+theme.wallpaper_cmd = { "awsetbg -c /home/martynas/Downloads/trecime.jpg" }
 -- }}}
 
 -- {{{ Styles

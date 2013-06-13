@@ -6,9 +6,8 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
-
 require("vicious")
-
+--require("pomodoro")
 
 -- local volwidget = widget({ type = "textbox" })
 -- vicious.register(volwidget, vicious.widgets.volume,
@@ -50,6 +49,10 @@ end
 -- beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 beautiful.init("/home/martynas/.config/awesome/themes/brb/theme.lua")
 
+-- Pomodoro
+-- local pomodoro = require("pomodoro")
+-- pomodoro.init()
+
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "editor"
@@ -66,7 +69,7 @@ modkey = "Mod4"
 layouts =
 {
     awful.layout.suit.floating,
-    -- awful.layout.suit.tile,
+    awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -199,6 +202,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        -- pomodoro.widget,
         netwidget,
         s == 1 and mysystray or nil,
         mytasklist[s],
@@ -252,7 +256,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
-    -- awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
+    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
@@ -266,7 +270,7 @@ globalkeys = awful.util.table.join(
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
     -- Lock
-    awful.key({ modkey,           }, "l",      function () run_once("gnome-screensaver-command", "-l") end),
+    awful.key({ modkey, "Shift", "Control"}, "l",      function () run_once("i3lock", "--color=444444") end),
 
     awful.key({ modkey }, "x",
               function ()
@@ -418,3 +422,4 @@ end
 run_once("gnome-settings-daemon")
 run_once("xcalib", "/home/martynas/.config/colorprofile.icc")
 run_once("nm-applet")
+--run_one("~/rc.sh")
