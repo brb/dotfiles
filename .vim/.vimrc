@@ -122,7 +122,8 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 autocmd FileType python set ts=4 sw=4 expandtab
 autocmd FileType python let g:SuperTabDefaultCompletionType = "context"
 
-map <Leader>p :!python %<cr>
+" Javascript
+autocmd FileType javascript set ts=2 sw=2 expandtab
 
 " HTML
 autocmd FileType html set ts=2 sw=2 expandtab
@@ -138,7 +139,7 @@ map <Leader>sl :SessionList<cr>
 map <Leader>sw :SessionSave<cr>
 
 " Commant-T
-set wildignore=*.beam,.git,*.png,*.css,deps/*
+set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
