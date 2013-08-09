@@ -25,7 +25,7 @@ URxvt.allow_bold: false
 /* URxvt.font: -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 ! URxvt*font: xft:Monospace:pixelsize=14
 ! URxvt*boldFont: xft:Monospace:pixelsize=14
-URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=15
+URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=20
 ! URxvt*boldFont: xft:SourceCodePro-Medium:pixelsize=15
 ! URxvt.font: xft:DejaVu Sans Mono-8
 ! Fix font space
@@ -49,6 +49,24 @@ URxvt.cursorUnderline: false
 URxvt.pointerBlank: true
 
 !!Source http://github.com/altercation/solarized
+
+!! *fading:                 0
+!! *background:             #fdf6e3
+!! *foreground:             #839496
+!! *fadeColor:              #fdf6e3
+!! *cursorColor:            #586e75
+!! *pointerColorBackground: #93a1a1
+!! *pointerColorForeground: #586e75
+!! *color0:                 #073642
+!! *color8:                 #fdf6e3
+!! *color10:                #93a1a1
+!! *color11:                #839496
+!! *color12:                #657b83
+!! *color14:                #586e75
+!! *color7:                 #839496
+!! *color15:                #002b36
+
+
 
 *background: #002b36
 *foreground: #657b83
