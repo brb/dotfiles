@@ -3,6 +3,8 @@ export HISTSIZE=500000
 export SAVEHIST=$HISTSIZE
 PROMPT="%n@%M %c> "
 
+set -o vi
+
 export BROWSER=firefox
 export EDITOR=vim
 
@@ -13,9 +15,11 @@ alias -s pdf=evince
 
 alias -s gz='tar -xzfv'
 alias -s bz2='tar -xjvf'
+alias -s erl='vim'
 
 alias -g ecd='cd ~/sandbox/erlang'
 alias -g scd='cd ~/sandbox/sumup'
+alias merl='ERL_LIBS="/home/martynas/sandbox/erlang/"'
 
 typeset -g -A key
 bindkey '^?' backward-delete-char
@@ -54,6 +58,10 @@ ssh-reagent () {
 source /home/martynas/.rvm/scripts/rvm
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# elixir
+
+PATH=$PATH:$HOME/sandbox/erlang/elixir/bin
 
 export PERL_LOCAL_LIB_ROOT="/home/martynas/perl5";
 export PERL_MB_OPT="--install_base /home/martynas/perl5";
