@@ -17,10 +17,6 @@ alias -s gz='tar -xzfv'
 alias -s bz2='tar -xjvf'
 alias -s erl='vim'
 
-alias -g ecd='cd ~/sandbox/erlang'
-alias -g scd='cd ~/sandbox/sumup'
-alias merl='ERL_LIBS="/home/martynas/sandbox/erlang/"'
-
 typeset -g -A key
 bindkey '^?' backward-delete-char
 bindkey '^[[7~' beginning-of-line
@@ -34,39 +30,27 @@ bindkey '^[[B' down-line-or-search
 bindkey '^[[C' forward-char
 bindkey '^[[2~' overwrite-mode
 bindkey '^R' history-incremental-search-backward
-bindkey '^a' beginning-of-line
+bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^[f' forward-word
 bindkey '^[b' backward-word
 
-#source ~/.autojump/etc/profile.d/autojump.zsh
-
 alias -s st='status'
 
-ssh-reagent () {
-    for agent in /tmp/ssh-*/agent.*; do
-        export SSH_AUTH_SOCK=$agent
-        if ssh-add -l 2>&1 > /dev/null; then
-             echo Found working SSH Agent:
-             ssh-add -l
-             return
-        fi
-    done
-    echo Cannot find ssh agent - maybe you should reconnect and forward it?
+function start_ssh-agent () {
+    if (( `ps ax|grep -c "ssh-agent"` == 1 ))
+    then
+        ssh-agent | sed 's/^echo/#echo/' > ~/.ssh-env
+    fi
+    source ~/.ssh-env
 }
 
-source /home/martynas/.rvm/scripts/rvm
+start_ssh-agent
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+autoload -U compinit promptinit
+compinit
+promptinit
 
-# elixir
-
-PATH=$PATH:$HOME/sandbox/erlang/elixir/bin
-
-export PERL_LOCAL_LIB_ROOT="/home/martynas/perl5";
-export PERL_MB_OPT="--install_base /home/martynas/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/martynas/perl5";
-export PERL5LIB="/home/martynas/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/martynas/perl5/lib/perl5";
-export PATH="/home/martynas/perl5/bin:$PATH";
+prompt walters
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
