@@ -17,6 +17,8 @@ alias -s gz='tar -xzfv'
 alias -s bz2='tar -xjvf'
 alias -s erl='vim'
 
+alias rm='rm -i'
+
 typeset -g -A key
 bindkey '^?' backward-delete-char
 bindkey '^[[7~' beginning-of-line
@@ -51,6 +53,10 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-prompt walters
+#prompt clint
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source ~/.profile

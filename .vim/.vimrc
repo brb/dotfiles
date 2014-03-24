@@ -105,6 +105,7 @@ set background=dark
 
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+set background=light
 colorscheme solarized
 
 " Common options for programming
@@ -152,3 +153,13 @@ inoremap <F5> <Esc>:w<CR>:make<CR>
 vnoremap <F5> :<C-U>:w<CR>:make<CR>
 
 let g:pad_dir = '/tmp/test'
+
+" Wiki
+
+" ctags
+set tags=./tags;/
+nmap <F8> :TagbarToggle<CR>
+
+" vimwiki
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'media'}
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext' : '.md'}]
