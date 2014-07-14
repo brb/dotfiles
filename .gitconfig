@@ -1,12 +1,12 @@
 [user]
-	name = Martynas Pumputis
-	email = martynas.pumputis@gmail.com
+    name = Martynas Pumputis
+    email = martynas.pumputis@gmail.com
 [color]
     branch = auto
     diff = auto
     status = auto
     ui = true
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [push]
-	default = current
+    default = current

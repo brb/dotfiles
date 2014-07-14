@@ -97,7 +97,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 
 set guifont=Monospace\ 9
 set enc=utf-8
-set background=dark
 
 "if has("gui_running")
 "set guioptions=n
@@ -141,6 +140,7 @@ map <Leader>sw :SessionSave<cr>
 
 " Commant-T
 set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*
+nnoremap <Leader>. :CtrlPTag<cr>
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
@@ -159,7 +159,12 @@ let g:pad_dir = '/tmp/test'
 " ctags
 set tags=./tags;/
 nmap <F8> :TagbarToggle<CR>
+nmap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " vimwiki
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'media'}
 let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext' : '.md'}]
+
+" swap files dir
+set backupdir=~/.vimtmpdir,.
+set directory=~/.vimtmpdir,.

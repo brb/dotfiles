@@ -1,2 +1,3 @@
 map ,l :js rdb.firefox.overlay.read_later()<CR>
 map ,r :js rdb.firefox.overlay.read_now()<CR>
+set gui=nonavigation

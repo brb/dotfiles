@@ -60,3 +60,4 @@ promptinit
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source ~/.profile
+source ~/sandbox/erlang/r16b02/activate

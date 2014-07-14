@@ -18,4 +18,8 @@ fi
 
 xflux -l 47.22 -g 8.33 -r 1 -k 4500 # zurich
 
+if [ -s ~/.Xdefaults ]; then
+    xrdb ~/.Xdefaults
+fi
+
 exec awesome
