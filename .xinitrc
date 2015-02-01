@@ -22,4 +22,5 @@ if [ -s ~/.Xdefaults ]; then
     xrdb ~/.Xdefaults
 fi
 
-exec awesome
+#exec awesome
+exec i3
