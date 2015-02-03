@@ -1,10 +1,6 @@
 #!/bin/sh
 
 
-if [ -s ~/.Xmodmap ]; then
-    xmodmap ~/.Xmodmap
-fi
-
 if [ -s ~/.fonts ]; then
     xset +fp ~/.fonts
 fi
@@ -16,11 +12,14 @@ if [ -s ~/.xbindkeysrc ]; then
     xbindkeys
 fi
 
-xflux -l 47.22 -g 8.33 -r 1 -k 4500 # zurich
-
 if [ -s ~/.Xdefaults ]; then
     xrdb ~/.Xdefaults
 fi
 
-#exec awesome
+if [ -s ~/.Xmodmap ]; then
+    xmodmap ~/.Xmodmap
+fi
+
+#redshift
+
 exec i3

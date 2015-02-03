@@ -10,3 +10,5 @@
     tool = vimdiff
 [push]
     default = current
+[core]
+    editor = vim
