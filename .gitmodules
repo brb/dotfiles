@@ -1,15 +1,21 @@
-[submodule ".vim/bundle/nerdtree"]
+[submodule "nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/command-t"]
+[submodule "command-t"]
 	path = .vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule ".vim/bundle/snipmate"]
+[submodule "snipmate"]
 	path = .vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
-[submodule ".vim/bundle/vim-powerline"]
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim-powerline"]
 	path = .vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/vimwiki"]
-	path = .vim/bundle/vimwiki
-	url = git://github.com/vimwiki/vimwiki
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "tudu"]
+  path = .vim/bundle/tudu
+  url = https://github.com/brb/tudu.txt
+[submodule "fugitive"]
+  path = .vim/bundle/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive

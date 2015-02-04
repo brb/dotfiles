@@ -7,9 +7,6 @@ set history=9999
 set enc=utf-8
 set novisualbell
 
-" Thesis writing mode o_O
-set spell
-
 set nocompatible
 set backspace=indent,eol,start
 set tabstop=4
@@ -22,22 +19,18 @@ set number
 set expandtab
 set textwidth=79
 set colorcolumn=80
-
+set spell
 set autoindent
 set smartindent
 set showmatch
 set nomodeline
 set wrap
-
 set list
 
 set hlsearch
-"set incsearch
 set smartcase
 " Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 set laststatus=2
 set ruler
@@ -48,8 +41,6 @@ set scrolloff=1
 set sidescrolloff=5
 set display+=lastline
 
-map <F8> <Esc>:w<cr>
-imap <F8> <Esc>:w<cr>i
 map  <C-A> <Home>
 map  <C-E> <End>
 imap  <C-A> <Home>
@@ -57,10 +48,6 @@ imap  <C-E> <End>
 
 let mapleader = ","
 map <Leader>, :NERDTreeToggle<cr>
-map <Leader><Left> :wincmd h<cr>
-map <Leader><Right> :wincmd l<cr>
-map <Leader><Up> :wincmd k<cr>
-map <Leader><Down> :wincmd j<cr>
 
 " dissable <F1>:
 nmap <F1> <nop>
@@ -72,27 +59,6 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-" tabs
-map <D-1> :tabn 1<CR>
-map <D-2> :tabn 2<CR>
-map <D-3> :tabn 3<CR>
-map <D-4> :tabn 4<CR>
-map <D-5> :tabn 5<CR>
-map <D-6> :tabn 6<CR>
-map <D-7> :tabn 7<CR>
-map <D-8> :tabn 8<CR>
-map <D-9> :tabn 9<CR>
-
-map! <D-1> <C-O>:tabn 1<CR>
-map! <D-2> <C-O>:tabn 2<CR>
-map! <D-3> <C-O>:tabn 3<CR>
-map! <D-4> <C-O>:tabn 4<CR>
-map! <D-5> <C-O>:tabn 5<CR>
-map! <D-6> <C-O>:tabn 6<CR>
-map! <D-7> <C-O>:tabn 7<CR>
-map! <D-8> <C-O>:tabn 8<CR>
-map! <D-9> <C-O>:tabn 9<CR>
-
 " highligh trailing whitespaces and tabs
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -100,18 +66,10 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 
 set guifont=Monospace\ 9
 set enc=utf-8
-
-"if has("gui_running")
-"set guioptions=n
-"endif
-
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
-"colorscheme base16-default
-
-" Common options for programming
 
 highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/
@@ -132,10 +90,6 @@ autocmd FileType javascript set ts=2 sw=2 expandtab
 " HTML
 autocmd FileType html set ts=2 sw=2 expandtab
 
-" Status bar
-set laststatus=2
-set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
-
 " Sessions
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 
@@ -152,16 +106,10 @@ nnoremap <Leader>. :CtrlPTag<cr>
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
-" PlantUML
-let g:plantuml_executable_script='java -jar $HOME/sandbox/temp/plantuml.jar'
-
+" make
 nnoremap <F5> :w<CR> :make<CR>
 inoremap <F5> <Esc>:w<CR>:make<CR>
 vnoremap <F5> :<C-U>:w<CR>:make<CR>
-
-let g:pad_dir = '/tmp/test'
-
-" Wiki
 
 " ctags
 set tags=./tags;/
@@ -175,44 +123,3 @@ let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext' : '.md'}]
 " swap files dir
 set backupdir=~/.vimtmpdir,.
 set directory=~/.vimtmpdir,.
-
-" Python-mode
-" Activate rope
-" Keys:
-" K             Show python docs
-" <Ctrl-Space>  Rope autocomplete
-" <Ctrl-c>g     Rope goto definition
-" <Ctrl-c>d     Rope show documentation
-" <Ctrl-c>f     Rope find occurrences
-" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
-"let g:pymode_rope = 1
-
-"" Documentation
-"let g:pymode_doc = 0
-"let g:pymode_doc_key = 'K'
-"
-""Linting
-"let g:pymode_lint = 1
-"let g:pymode_lint_checker = "pyflakes,pep8"
-"" Auto check on save
-"let g:pymode_lint_write = 1
-"
-"" Support virtualenv
-"let g:pymode_virtualenv = 1
-"
-"" Enable breakpoints plugin
-"let g:pymode_breakpoint = 1
-"let g:pymode_breakpoint_key = '<leader>b'
-"
-"" syntax highlighting
-"let g:pymode_syntax = 1
-"let g:pymode_syntax_all = 1
-"let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-"let g:pymode_syntax_space_errors = g:pymode_syntax_all
-"
-"" Don't autofold code
-"let g:pymode_folding = 0
