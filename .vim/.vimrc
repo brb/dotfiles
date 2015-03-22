@@ -128,3 +128,14 @@ set directory=~/.vimtmpdir,.
 "autocmd FileType markdown map gf :e <cfile>.md<cr>
 autocmd FileType markdown map gf :e <cfile><cr>
 autocmd FileType markdown set textwidth=79
+
+" tudu.txt
+
+function! MarkdownLevel()
+    if getline(v:lnum) =~ '^## .*$'
+        return ">1"
+    endif
+    return "="
+endfunction
+autocmd FileType tudu set foldmethod=expr
+autocmd FileType tudu set foldexpr=MarkdownLevel()
