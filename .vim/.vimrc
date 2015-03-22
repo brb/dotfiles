@@ -17,7 +17,7 @@ set modelines=1
 set mouse=a
 set number
 set expandtab
-set textwidth=79
+"set textwidth=79
 set colorcolumn=80
 set spell
 set autoindent
@@ -25,7 +25,7 @@ set smartindent
 set showmatch
 set nomodeline
 set wrap
-set list
+"set list
 
 set hlsearch
 set smartcase
@@ -68,7 +68,7 @@ set guifont=Monospace\ 9
 set enc=utf-8
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-set background=dark
+set background=light
 colorscheme solarized
 
 highlight RedundantSpaces ctermbg=red guibg=red
@@ -123,3 +123,8 @@ let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext' : '.md'}]
 " swap files dir
 set backupdir=~/.vimtmpdir,.
 set directory=~/.vimtmpdir,.
+
+" Markdown
+"autocmd FileType markdown map gf :e <cfile>.md<cr>
+autocmd FileType markdown map gf :e <cfile><cr>
+autocmd FileType markdown set textwidth=79

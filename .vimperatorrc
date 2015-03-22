@@ -1,4 +1,16 @@
 map ,l :js rdb.firefox.overlay.read_later()<CR>
 set gui=nonavigation
 
-map ,r :js function iprl5(){var d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;try{if(!b)throw(0);d.title='(Saving...) '+d.title;z.setAttribute('src',l.protocol+'//www.instapaper.com/j/1kSlVDerY9i5?a=read-later&u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));b.appendChild(z);}catch(e){alert('Please wait until the page has loaded.');}}iprl5();void(0)<CR>
+" Instapaper
+" Taken from https://github.com/claytron/dotfiles/blob/master/.vimperatorrc
+noremap <silent> in :open javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/imXQ8OR8FphZ?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)<CR>
+
+" Pinboard.in
+" Taken from https://github.com/teffalump/dotfiles/blob/master/.vimperatorrc
+noremap <silent> pi :js popup_with_tags()<CR>
+js << EOF
+popup_with_tags=function()
+{
+q=content.document.location.href;if(document.getSelection){d=document.getSelection();}else{d='';};p=document.title;void(open('https://pinboard.in/add?showtags=yes&url='+encodeURIComponent(q)+'&description='+encodeURIComponent(d)+'&title='+encodeURIComponent(p),'Pinboard','toolbar=no,scrollbars=yes,width=750,height=700'));
+}
+EOF
