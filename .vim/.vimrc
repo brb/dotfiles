@@ -25,6 +25,7 @@ set smartindent
 set showmatch
 set nomodeline
 set wrap
+set ignorecase
 "set list
 
 set hlsearch
@@ -99,9 +100,10 @@ map <Leader>sw :SessionSave<cr>
 " Other
 map <Leader>q :on<cr>
 
-" Commant-T
+" Command-T
 set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*
 nnoremap <Leader>. :CtrlPTag<cr>
+let g:CommandTTraverseSCM='pwd'
 
 " Powerline
 let g:Powerline_symbols = 'fancy'

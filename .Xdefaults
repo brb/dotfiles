@@ -30,7 +30,7 @@ URxvt.lineSpace: 0
 ! Fonts
 !URxvt.allow_bold: false
 !URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=24
-URxvt*font: xft:Source Code Pro for Powerline:pixelsize=24
+URxvt*font: xft:Source Code Pro for Powerline:pixelsize=20
 !Urxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=24:antialias=true:hinting=true
 !URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=28:antialias=true:hinting=tru
 !URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=28:antialias=true:hinting=tru
