@@ -17,7 +17,7 @@ set modelines=1
 set mouse=a
 set number
 set expandtab
-"set textwidth=79
+set textwidth=79
 set colorcolumn=80
 set spell
 set autoindent
@@ -101,7 +101,7 @@ map <Leader>sw :SessionSave<cr>
 map <Leader>q :on<cr>
 
 " Command-T
-set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*
+set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*,vendor/*,Godeps/*
 nnoremap <Leader>. :CtrlPTag<cr>
 let g:CommandTTraverseSCM='pwd'
 
@@ -141,3 +141,15 @@ function! MarkdownLevel()
 endfunction
 autocmd FileType tudu set foldmethod=expr
 autocmd FileType tudu set foldexpr=MarkdownLevel()
+
+function LinuxFormatting()
+    setlocal tabstop=8
+    setlocal shiftwidth=8
+    setlocal softtabstop=8
+    setlocal textwidth=80
+    setlocal noexpandtab
+
+    setlocal cindent
+    setlocal formatoptions=tcqlron
+    setlocal cinoptions=:0,l1,t0,g0,(0
+endfunction
