@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ -s ~/.fonts ]; then
     xset +fp ~/.fonts
 fi

@@ -1,0 +1,31 @@
+#!/usr/bin/env python2
+
+# taken and modified from https://raw.githubusercontent.com/nheinric/addToAnki/master/add_to_anki-2.0.12.py
+
+import sys
+
+# reuse the archlinux package
+sys.path.insert(0, "/usr/share/anki")
+
+from anki import Collection as aopen
+
+collection_path = sys.argv[1]
+deck_name = sys.argv[2]
+front = sys.argv[3]
+back = sys.argv[4]
+
+deck = aopen(collection_path)
+deck_id = deck.decks.id(deck_name)
+deck.decks.select(deck_id)
+basic_model = deck.models.byName('Basic')
+basic_model['did'] = deck_id
+deck.models.save(basic_model)
+deck.models.setCurrent(basic_model)
+
+card = deck.newNote()
+card['Front'] = front.decode('utf-8')
+card['Back'] = back.decode('utf-8')
+deck.addNote(card)
+
+deck.save()
+deck.close()

@@ -17,7 +17,7 @@ set modelines=1
 set mouse=a
 set number
 set expandtab
-set textwidth=79
+set textwidth=160
 set colorcolumn=80
 set spell
 set autoindent
@@ -48,7 +48,7 @@ imap  <C-A> <Home>
 imap  <C-E> <End>
 
 let mapleader = ","
-map <Leader>, :NERDTreeToggle<cr>
+nmap <F8> :NERDTreeToggle<CR>
 
 " dissable <F1>:
 nmap <F1> <nop>
@@ -91,6 +91,9 @@ autocmd FileType javascript set ts=2 sw=2 expandtab
 " HTML
 autocmd FileType html set ts=2 sw=2 expandtab
 
+" Go
+autocmd FileType go set textwidth=120
+
 " Sessions
 set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winsize,winpos
 
@@ -115,7 +118,7 @@ vnoremap <F5> :<C-U>:w<CR>:make<CR>
 
 " ctags
 set tags=./tags;/
-nmap <F8> :TagbarToggle<CR>
+nmap <Leader>, :TagbarToggle<cr>
 nmap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " vimwiki
