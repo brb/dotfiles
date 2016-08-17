@@ -104,7 +104,7 @@ map <Leader>sw :SessionSave<cr>
 map <Leader>q :on<cr>
 
 " Command-T
-set wildignore=*.beam,.git,*.png,*.css,deps/*,logs/*,vendor/*,Godeps/*
+set wildignore=*.beam,.git,deps/*,logs/*,vendor/*,Godeps/*
 nnoremap <Leader>. :CtrlPTag<cr>
 let g:CommandTTraverseSCM='pwd'
 
