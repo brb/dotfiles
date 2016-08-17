@@ -130,12 +130,10 @@ set backupdir=~/.vimtmpdir,.
 set directory=~/.vimtmpdir,.
 
 " Markdown
-"autocmd FileType markdown map gf :e <cfile>.md<cr>
 autocmd FileType markdown map gf :e <cfile><cr>
 autocmd FileType markdown set textwidth=79
 
 " tudu.txt
-
 function! MarkdownLevel()
     if getline(v:lnum) =~ '^## .*$'
         return ">1"
@@ -145,14 +143,5 @@ endfunction
 autocmd FileType tudu set foldmethod=expr
 autocmd FileType tudu set foldexpr=MarkdownLevel()
 
-function LinuxFormatting()
-    setlocal tabstop=8
-    setlocal shiftwidth=8
-    setlocal softtabstop=8
-    setlocal textwidth=80
-    setlocal noexpandtab
-
-    setlocal cindent
-    setlocal formatoptions=tcqlron
-    setlocal cinoptions=:0,l1,t0,g0,(0
-endfunction
+" linux kernel
+let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb" ]
