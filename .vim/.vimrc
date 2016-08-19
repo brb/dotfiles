@@ -145,3 +145,8 @@ autocmd FileType tudu set foldexpr=MarkdownLevel()
 
 " linux kernel
 let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb" ]
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
