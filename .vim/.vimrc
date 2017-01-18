@@ -150,3 +150,9 @@ let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb" ]
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/](vendor)$',
+    \ }
