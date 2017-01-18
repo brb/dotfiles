@@ -103,11 +103,6 @@ map <Leader>sw :SessionSave<cr>
 " Other
 map <Leader>q :on<cr>
 
-" Command-T
-set wildignore=*.beam,.git,deps/*,logs/*,vendor/*,Godeps/*
-nnoremap <Leader>. :CtrlPTag<cr>
-let g:CommandTTraverseSCM='pwd'
-
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
