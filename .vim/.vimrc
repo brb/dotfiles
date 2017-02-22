@@ -103,11 +103,6 @@ map <Leader>sw :SessionSave<cr>
 " Other
 map <Leader>q :on<cr>
 
-" Command-T
-set wildignore=*.beam,.git,deps/*,logs/*,vendor/*,Godeps/*
-nnoremap <Leader>. :CtrlPTag<cr>
-let g:CommandTTraverseSCM='pwd'
-
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
@@ -130,12 +125,10 @@ set backupdir=~/.vimtmpdir,.
 set directory=~/.vimtmpdir,.
 
 " Markdown
-"autocmd FileType markdown map gf :e <cfile>.md<cr>
 autocmd FileType markdown map gf :e <cfile><cr>
 autocmd FileType markdown set textwidth=79
 
 " tudu.txt
-
 function! MarkdownLevel()
     if getline(v:lnum) =~ '^## .*$'
         return ">1"
@@ -146,20 +139,29 @@ autocmd FileType tudu set foldmethod=expr
 autocmd FileType tudu set foldexpr=MarkdownLevel()
 
 " reads.md
-
 au BufRead,BufNewFile reads.md set filetype=reads
 autocmd FileType reads set foldmethod=expr
 autocmd FileType reads set foldexpr=MarkdownLevel()
 autocmd FileType reads set textwidth=160
 
+" linux kernel
 function LinuxFormatting()
     setlocal tabstop=8
     setlocal shiftwidth=8
     setlocal softtabstop=8
     setlocal textwidth=80
     setlocal noexpandtab
-
-    setlocal cindent
-    setlocal formatoptions=tcqlron
-    setlocal cinoptions=:0,l1,t0,g0,(0
 endfunction
+
+let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb" ]
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/](vendor)$',
+    \ }

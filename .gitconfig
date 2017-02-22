@@ -12,3 +12,8 @@
     default = current
 [core]
     editor = vim
+[sendemail]
+    smtpEncryption = tls
+    smtpServer = smtp.gmail.com
+    smtpUser = martynas@email
+    smtpServerPort = 587
