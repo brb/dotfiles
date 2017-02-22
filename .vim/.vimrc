@@ -145,6 +145,13 @@ endfunction
 autocmd FileType tudu set foldmethod=expr
 autocmd FileType tudu set foldexpr=MarkdownLevel()
 
+" reads.md
+
+au BufRead,BufNewFile reads.md set filetype=reads
+autocmd FileType reads set foldmethod=expr
+autocmd FileType reads set foldexpr=MarkdownLevel()
+autocmd FileType reads set textwidth=160
+
 function LinuxFormatting()
     setlocal tabstop=8
     setlocal shiftwidth=8
