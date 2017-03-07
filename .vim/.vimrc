@@ -138,7 +138,21 @@ endfunction
 autocmd FileType tudu set foldmethod=expr
 autocmd FileType tudu set foldexpr=MarkdownLevel()
 
+" reads.md
+au BufRead,BufNewFile reads.md set filetype=reads
+autocmd FileType reads set foldmethod=expr
+autocmd FileType reads set foldexpr=MarkdownLevel()
+autocmd FileType reads set textwidth=160
+
 " linux kernel
+function LinuxFormatting()
+    setlocal tabstop=8
+    setlocal shiftwidth=8
+    setlocal softtabstop=8
+    setlocal textwidth=80
+    setlocal noexpandtab
+endfunction
+
 let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb" ]
 
 " ultisnips
