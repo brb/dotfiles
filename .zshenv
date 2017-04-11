@@ -1,2 +1,2 @@
-export GOPATH=$HOME/sandbox/weave/gopath
+export GOPATH=$HOME/sandbox/gopath
 export GOROOT_BOOTSTRAP=/usr/lib/go

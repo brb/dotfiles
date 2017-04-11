@@ -12,7 +12,7 @@ ln -sf $PWD/.xinitrc $HOME/.xinitrc
 ln -sf $PWD/.Xmodmap $HOME/.Xmodmap
 ln -sf $PWD/.Xdefaults $HOME/.Xdefaults
 ln -sf $PWD/.i3status.conf $HOME/.i3status.conf
-ln -sf $PWD/.i3status.conf $HOME/.i3status.conf
+ln -sf $PWD/.ctags $HOME/.ctags
 mkdir -p $HOME/.i3
 ln -sf $PWD/.i3.config $HOME/.i3/config
 ln -sf $PWD/redshift.conf $HOME/.config/redshift.conf
