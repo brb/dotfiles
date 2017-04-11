@@ -1,18 +1,9 @@
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="3den"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-autoload -U promptinit
-promptinit
-
 [[ -s /home/brb/.autojump/etc/profile.d/autojump.sh ]] && source /home/brb/.autojump/etc/profile.d/autojump.sh
 
+autoload -U promptinit && promptinit && prompt bart
 autoload -U compinit && compinit -u
 
-export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/misc/dotfiles/bin"
+export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin"
 
 alias rm="rm -i"
 alias wiki="cd ~/wiki && vim index.md && cd -"

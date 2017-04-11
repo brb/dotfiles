@@ -2,20 +2,14 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-!xterm*termName: xterm-256color
+xterm*termName: xterm-256color
 
-!Xft.dpi: 96
-!Xft.antialias: true
-!Xft.rgba: rgb
-!Xft.hinting: true
-!Xft.hintstyle: hintslight
-
-Xft.autohint: 0
 Xft.dpi: 96
 Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
+Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 
 URxvt.depth: 32
@@ -28,10 +22,7 @@ URxvt.internalBorder: 3
 URxvt.lineSpace: 0
 
 ! Fonts
-!URxvt.allow_bold: false
-!URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=24
-URxvt*font: xft:Source Code Pro for Powerline:pixelsize=18:antialias=true
-!URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=28:antialias=true:hinting=tru
+URxvt*font: xft:Source\ Code\ Pro:antialias=true:hinting=true:pixelsize=18
 URxvt*letterSpace: -1
 
 ! Scrollbar
@@ -54,7 +45,7 @@ URxvt.pointerBlank: true
 
 !Solarized
 
-URxvt.intensityStyles: false
+!URxvt.intensityStyles: false
 #define S_yellow #b58900
 #define S_orange #cb4b16
 #define S_red #dc322f
@@ -72,7 +63,7 @@ URxvt.intensityStyles: false
 #define S_base2 #073642
 #define S_base3 #002b36
 *background: S_base03
-*foreground: S_base0
+!*foreground: S_base0
 *fading: 40
 *fadeColor: S_base03
 *cursorColor: S_base1
@@ -94,7 +85,7 @@ URxvt.intensityStyles: false
 *color13: S_violet
 *color14: S_base1
 *color15: S_base3
-!
+
 ! Dark
 
 !#define S_base03 #002b36
