@@ -1,7 +1,10 @@
 [[ -s /home/brb/.autojump/etc/profile.d/autojump.sh ]] && source /home/brb/.autojump/etc/profile.d/autojump.sh
 
-autoload -U promptinit && promptinit && prompt bart
+autoload -U promptinit && promptinit
 autoload -U compinit && compinit -u
+
+PROMPT=$'$%~ %D{[%I:%M:%S]}\
+> '
 
 export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin"
 
@@ -22,3 +25,15 @@ alias trl="trans lt:eng"
 alias tre="trans eng:lt"
 alias ldn="anki-add $HOME/Documents/Anki/brb/collection.anki2 ldn"
 alias reads="vim $HOME/Dropbox/reads.md"
+
+## History
+
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history # share command history data
+setopt inc_append_history
