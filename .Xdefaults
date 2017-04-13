@@ -2,7 +2,7 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-xterm*termName: xterm-256color
+URxvt*termName: rxvt-unicode
 
 Xft.dpi: 96
 Xft.antialias: true

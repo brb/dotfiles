@@ -28,12 +28,31 @@ alias reads="vim $HOME/Dropbox/reads.md"
 
 ## History
 
+if [ -z "$HISTFILE" ]; then
+    HISTFILE=$HOME/.history
+fi
+
+HISTSIZE=10000
+SAVEHIST=10000
+
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
-setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
-setopt share_history # share command history data
+setopt share_history
 setopt inc_append_history
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
+[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+
+## Bindings
+
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
