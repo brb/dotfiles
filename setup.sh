@@ -16,3 +16,4 @@ ln -sf $PWD/.ctags $HOME/.ctags
 mkdir -p $HOME/.i3
 ln -sf $PWD/.i3.config $HOME/.i3/config
 ln -sf $PWD/redshift.conf $HOME/.config/redshift.conf
+mkdir $HOME/.vimtmpdir
