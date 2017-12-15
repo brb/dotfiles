@@ -21,4 +21,6 @@ fi
 
 #redshift
 
+dunst &
+
 exec i3
