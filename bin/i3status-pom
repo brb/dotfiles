@@ -1,7 +1,0 @@
-#!/bin/sh
-
-i3status | (read line && echo "$line" && read line && echo "$line" && read line && echo "$line" && while :
-do
-  read line
-  echo ",[{\"full_text\":\"pom: $(pom status)\" },${line#,\[}" || exit 1
-done)
