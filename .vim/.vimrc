@@ -75,6 +75,8 @@ colorscheme solarized
 highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/
 
+hi SpellBad guibg=#ff2929 ctermbg=224
+
 syn on
 filetype plugin on
 
@@ -165,3 +167,7 @@ let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](vendor)$',
     \ }
+
+" rusty-tags
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+"autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
