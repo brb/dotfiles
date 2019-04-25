@@ -22,7 +22,7 @@ URxvt.internalBorder: 3
 URxvt.lineSpace: 0
 
 ! Fonts
-URxvt*font: xft:Source\ Code\ Pro:antialias=true:hinting=true:pixelsize=18
+URxvt*font: xft:Source\ Code\ Pro:antialias=true:hinting=true:pixelsize=19
 URxvt*letterSpace: -1
 
 ! Scrollbar
@@ -32,7 +32,7 @@ URxvt*saveLines: 100
 
 ! Perl extensions
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: chromium
+URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 
 ! Cursor
