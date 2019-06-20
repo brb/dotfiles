@@ -155,7 +155,7 @@ function LinuxFormatting()
     setlocal noexpandtab
 endfunction
 
-let g:linuxsty_patterns = [ "kernel-upstream", "kernel-brb", "linux" ]
+let g:linuxsty_patterns = [ "bpf", "kernel-upstream", "kernel-brb", "linux" ]
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"

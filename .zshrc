@@ -10,14 +10,14 @@ export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOM
 
 alias rm="rm -i"
 alias wiki="cd ~/wiki && vim index.md && cd -"
-alias wwiki="cd ~/wwiki && vim index.md && cd -"
+alias cwiki="cd ~/cwiki && vim index.md && cd -"
 alias todo="vim ~/todo.txt"
 alias slog="vim ~/slog.txt"
 alias music="vim ~/wiki/music/todo.md"
 alias gg="git grep"
 alias gch="git checkout"
 alias gco="git commit -v"
-alias 2k="vim ~/wiki/personal/2017.md"
+alias 2k="vim ~/wiki/personal/2019.md"
 alias god="go doc"
 alias pinigai="vim $HOME/Dropbox/Expenses/`date +%Y_%m`.txt"
 alias ydl="docker run -v $(pwd):/download --rm ydl"
@@ -25,6 +25,7 @@ alias trl="trans lt:eng"
 alias tre="trans eng:lt"
 alias ldn="anki-add $HOME/Documents/Anki/brb/collection.anki2 ldn"
 alias reads="vim $HOME/Dropbox/reads.md"
+alias k="kubectl"
 
 ## History
 

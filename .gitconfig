@@ -1,6 +1,6 @@
 [user]
     name = Martynas Pumputis
-    email = martynasp@gmail.com
+    email = m@lambda.lt
 [color]
     branch = auto
     diff = auto
@@ -14,6 +14,5 @@
     editor = vim
 [sendemail]
     smtpEncryption = tls
-    smtpServer = smtp.gmail.com
-    smtpUser = martynas@email
+    smtpServer = smtp.fastmail.com
     smtpServerPort = 587
