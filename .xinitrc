@@ -19,6 +19,8 @@ if [ -s ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 
+/usr/bin/xcalib -d :0 ~/Downloads/colorprofile.icm
+
 #redshift
 
 dunst &
