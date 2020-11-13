@@ -17,14 +17,15 @@ alias music="vim ~/wiki/music/todo.md"
 alias gg="git grep"
 alias gch="git checkout"
 alias gco="git commit -v"
-alias 2k="vim ~/wiki/personal/2019.md"
+alias 2k="vim ~/wiki/personal/2020.md"
 alias god="go doc"
 alias pinigai="vim $HOME/Dropbox/Expenses/`date +%Y_%m`.txt"
 alias ydl="docker run -v $(pwd):/download --rm ydl"
 alias trl="trans lt:eng"
 alias tre="trans eng:lt"
+alias trd="trans de:eng"
+alias trede="trans eng:de"
 alias ldn="anki-add $HOME/Documents/Anki/brb/collection.anki2 ldn"
-alias reads="vim $HOME/Dropbox/reads.md"
 alias k="kubectl"
 
 ## History
@@ -57,3 +58,17 @@ zle -N down-line-or-beginning-search
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
+
+## kubectl
+source <(command kubectl completion zsh)
+# kubectl () {
+#    command kubectl $*
+#    if [[ -z $KUBECTL_COMPLETE ]]
+#    then
+#        source <(command kubectl completion zsh)
+#        KUBECTL_COMPLETE=1
+#    fi
+#}
+
+alias k="kubectl"
+alias ks="kubectl -n kube-system"

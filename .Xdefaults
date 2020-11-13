@@ -22,7 +22,7 @@ URxvt.internalBorder: 3
 URxvt.lineSpace: 0
 
 ! Fonts
-URxvt*font: xft:Source\ Code\ Pro:antialias=true:hinting=true:pixelsize=19
+URxvt*font: xft:Source\ Code\ Pro:antialias=true:hinting=true:pixelsize=20
 URxvt*letterSpace: -1
 
 ! Scrollbar
@@ -45,7 +45,7 @@ URxvt.pointerBlank: true
 
 !Solarized
 
-!URxvt.intensityStyles: false
+URxvt.intensityStyles: false
 #define S_yellow #b58900
 #define S_orange #cb4b16
 #define S_red #dc322f
