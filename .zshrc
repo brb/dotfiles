@@ -6,7 +6,7 @@ autoload -U compinit && compinit -u
 PROMPT=$'$%~ %D{[%I:%M:%S]}\
 > '
 
-export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin"
+export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin:$HOME/.local/bin"
 
 alias rm="rm -i"
 alias wiki="cd ~/wiki && vim index.md && cd -"
