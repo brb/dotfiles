@@ -69,7 +69,7 @@ set guifont=Monospace\ 9
 set enc=utf-8
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-set background=light
+set background=dark
 colorscheme solarized
 
 highlight RedundantSpaces ctermbg=red guibg=red
