@@ -37,8 +37,6 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
@@ -49,10 +47,10 @@ setopt inc_append_history
 setopt share_history
 setopt inc_append_history
 
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
-[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 ## Bindings
 
@@ -72,3 +70,5 @@ source <(command kubectl completion zsh)
 
 alias k="kubectl"
 alias ks="kubectl -n kube-system"
+
+export EDITOR=vim
