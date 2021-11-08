@@ -4,8 +4,6 @@ i3status | (read line && echo "$line" && read line && echo "$line" && read line 
 do
   read line
   echo -n ",["
-  echo -n "{\"full_text\":\"pom: $(pom status)\" }," || exit 1
-  #price=$(curl -s http://api.coindesk.com/v1/bpi/currentprice/EUR.json | jq -r '.bpi["EUR"]["rate"]' || echo "NA")
-  #echo -n "{\"full_text\":\"$price EU\"}," || exit 1
+  echo -n "{\"full_text\":\"$(xkblayout-state print '%s')\" }," || exit 1
   echo "${line#,\[}" || exit 1
 done)
