@@ -8,6 +8,7 @@
     ui = true
 [merge]
     tool = vimdiff
+    renamelimit = 4000
 [push]
     default = current
 [core]
@@ -22,3 +23,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status

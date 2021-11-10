@@ -47,13 +47,10 @@ setopt inc_append_history
 setopt share_history
 setopt inc_append_history
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-bindkey -v
+#bindkey "^[[A" history-beginning-search-backward
+#bindkey "^[[B" history-beginning-search-forward
+#bindkey -v
 bindkey '^R' history-incremental-search-backward
-
-## Bindings
-
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
