@@ -12,7 +12,7 @@
 [push]
     default = current
 [core]
-    editor = vim
+    editor = nvim
 [sendemail]
     smtpEncryption = tls
     smtpServer = smtp.fastmail.com
@@ -28,3 +28,12 @@
 	br = branch
 	ci = commit
 	st = status
+    dft = difftool
+[diff]
+	tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
