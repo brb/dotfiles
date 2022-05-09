@@ -21,6 +21,7 @@ alias tre="trans eng:lt"
 alias trd="trans de:eng"
 alias trede="trans eng:de"
 alias k="kubectl"
+alias v="nvim"
 
 ## History
 
