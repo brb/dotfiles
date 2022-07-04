@@ -29,8 +29,8 @@ if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.history
 fi
 
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
 
 setopt append_history
 setopt extended_history
