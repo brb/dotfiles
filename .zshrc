@@ -4,6 +4,7 @@ autoload -U promptinit && promptinit
 autoload -U compinit && compinit -u
 
 export EDITOR=nvim
+export TERMINAL=alacritty
 
 export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 
@@ -29,7 +30,7 @@ if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.history
 fi
 
-HISTSIZE=999999999
+HISTSIZE=9999999999
 SAVEHIST=$HISTSIZE
 
 setopt append_history
