@@ -25,4 +25,6 @@ fi
 
 dunst &
 
+feh --bg-center $HOME/sandbox/dotfiles/bg/1.jpg
+
 exec i3
