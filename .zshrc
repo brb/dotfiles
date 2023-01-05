@@ -12,11 +12,9 @@ alias rm="rm -i"
 alias wiki="cd ~/wiki && nvim index.md && cd -"
 alias cwiki="cd ~/cwiki && nvim index.md && cd -"
 alias todo="nvim ~/todo.txt"
-alias slog="nvim ~/slog.txt"
 alias music="nvim ~/wiki/music/todo.md"
 alias gg="git grep"
 alias god="go doc"
-alias ydl="docker run -v $(pwd):/download --rm ydl"
 alias trl="trans lt:eng"
 alias tre="trans eng:lt"
 alias trd="trans de:eng"
@@ -44,6 +42,7 @@ setopt share_history
 setopt inc_append_history
 
 bindkey '^R' history-incremental-search-backward
+bindkey '^E' history-incremental-search-forward
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
