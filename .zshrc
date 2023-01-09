@@ -41,8 +41,8 @@ setopt inc_append_history
 setopt share_history
 setopt inc_append_history
 
-bindkey '^R' history-incremental-search-backward
-bindkey '^E' history-incremental-search-forward
+#bindkey '^R' history-incremental-search-backward
+#bindkey '^E' history-incremental-search-forward
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
@@ -60,3 +60,8 @@ zstyle ':vcs_info:git:*' formats '@ %b'
 setopt PROMPT_SUBST
 PROMPT=$'$%~ %D{[%I:%M:%S] ${vcs_info_msg_0_}\
 > '
+
+## fzf
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
