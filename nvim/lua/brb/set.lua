@@ -30,7 +30,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
--- TODO(brb) move to separate plugin
+-- TODO(brb) move to separate plugin and autocmd
 if string.match(vim.api.nvim_buf_get_name(0), "/bpf/") then
   vim.opt.tabstop=8
   vim.opt.shiftwidth=8
