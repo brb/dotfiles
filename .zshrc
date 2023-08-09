@@ -5,7 +5,6 @@ autoload -U compinit && compinit -u
 
 export EDITOR=nvim
 export TERMINAL=alacritty
-
 export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 
 alias rm="rm -i"
@@ -20,6 +19,7 @@ alias trd="trans de:eng"
 alias trede="trans eng:de"
 alias k="kubectl"
 alias v="nvim"
+alias vimdiff='nvim -d'
 
 ## History
 

@@ -6,9 +6,6 @@
     diff = auto
     status = auto
     ui = true
-[merge]
-    tool = vimdiff
-    renamelimit = 4000
 [push]
     default = current
 [core]
@@ -29,11 +26,20 @@
 	ci = commit
 	st = status
     dft = difftool
-[diff]
-	tool = difftastic
-[difftool]
-    prompt = false
-[difftool "difftastic"]
-    cmd = difft "$LOCAL" "$REMOTE"
 [pager]
     difftool = true
+[init]
+	defaultBranch = main
+
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
+[merge]
+    tool = nvimmerge
+[mergetool]
+    hideResolved = true
+[mergetool "nvimmerge"]
+    cmd = nvim -d "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+
+

@@ -62,4 +62,8 @@ return require('packer').startup(function(use)
 	  config = function() require('aerial').setup() end
   }
 
+
+  use 'sindrets/diffview.nvim'
+  use 'nvim-tree/nvim-web-devicons'
+
 end)

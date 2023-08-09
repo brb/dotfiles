@@ -15,16 +15,20 @@ if [ -s ~/.Xdefaults ]; then
     xrdb ~/.Xdefaults
 fi
 
+if [ -s ~/.Xresources ]; then
+    xrdb -merge ~/.Xresources
+fi
+
 if [ -s ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
-
-/usr/bin/xcalib -d :0 ~/Downloads/colorprofile.icm
 
 #redshift
 
 dunst &
 
 feh --bg-center $HOME/sandbox/dotfiles/bg/1.jpg
+
+tuxedo-control-center &
 
 exec i3
