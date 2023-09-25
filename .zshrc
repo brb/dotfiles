@@ -3,10 +3,6 @@
 autoload -U promptinit && promptinit
 autoload -U compinit && compinit -u
 
-export EDITOR=nvim
-export TERMINAL=alacritty
-export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
-
 alias rm="rm -i"
 alias wiki="cd ~/wiki && nvim index.md && cd -"
 alias cwiki="cd ~/cwiki && nvim index.md && cd -"
