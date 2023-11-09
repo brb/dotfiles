@@ -31,4 +31,4 @@ feh --bg-center $HOME/sandbox/dotfiles/bg/1.jpg
 
 tuxedo-control-center &
 
-exec i3
+#exec i3

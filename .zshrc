@@ -46,6 +46,7 @@ bindkey "${terminfo[kend]}" end-of-line
 source <(command kubectl completion zsh)
 alias k="kubectl"
 alias ks="kubectl -n kube-system"
+alias kt="kubectl -n cilium-test"
 
 ## PROMPT
 
