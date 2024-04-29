@@ -6,6 +6,7 @@ autoload -U compinit && compinit -u
 alias rm="rm -i"
 alias wiki="cd ~/wiki && nvim index.md && cd -"
 alias cwiki="cd ~/cwiki && nvim index.md && cd -"
+alias iso="nvim ~/org/iso.org"
 alias todo="nvim ~/todo.txt"
 alias music="nvim ~/wiki/music/todo.md"
 alias god="go doc"
@@ -72,3 +73,13 @@ gg() {
         nvim +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
     fi
 }
+
+ggi() {
+    local tmp=$(git grep -i -n --color=always "$1" | fzf --ansi)
+    if [ ! -z "$tmp" ]; then
+        nvim +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
+    fi
+}
+
+## Suggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
