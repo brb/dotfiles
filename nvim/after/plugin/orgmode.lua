@@ -2,10 +2,10 @@ require('orgmode').setup({
   org_agenda_files = {'~/org/*'},
   org_default_notes_file = '~/org/index.org',
   org_capture_templates = {
-	  d = {
-		  description = "brain dump",
+	  t = {
+		  description = "todo",
           template = '* %?\n  %u',
-		  target = "~/org/dump.org",
+		  target = "~/org/inbox.org",
 	  },
       r = {
 		  description = "read",
@@ -21,6 +21,11 @@ require('orgmode').setup({
 		  description = "watch",
           template = '* %?\n  %u',
 		  target = "~/org/watch.org",
+	  },
+      p = {
+		  description = "podcast",
+          template = '* %?\n  %u',
+		  target = "~/org/podcast.org",
 	  }
   },
   org_startup_folded = 'showeverything',
