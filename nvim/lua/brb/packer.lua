@@ -9,13 +9,14 @@ return require('packer').startup(function(use)
   }
 
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
+  --use({
+  --    'rose-pine/neovim',
+  --    as = 'rose-pine',
+  --    config = function()
+  --  	  -- vim.cmd('colorscheme rose-pine')
+  --  	  vim.cmd('colorscheme quiet')
+  --    end
+  --})
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -24,6 +25,8 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('tpope/vim-rhubarb')
+
+  use('fxn/vim-monochrome')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

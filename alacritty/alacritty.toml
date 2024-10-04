@@ -19,3 +19,6 @@ style = "Regular"
 
 [env]
 TERM = "xterm-256color"
+
+[colors.cursor]
+cursor = "#FF6EC7"
