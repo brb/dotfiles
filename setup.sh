@@ -14,3 +14,5 @@ ln -sf $PWD/.i3.config $HOME/.i3/config
 ln -sf $PWD/redshift.conf $HOME/.config/redshift.conf
 ln -sf $PWD/nvim $HOME/.config/nvim
 ln -sf $PWD/alacritty/ $HOME/.config/alacritty
+mkdir -p $HOME/.config/helix
+ln -sf $PWD/helix-config.toml $HOME/.config/helix/config.toml

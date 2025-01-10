@@ -18,6 +18,7 @@ alias trdl="trans de:lt"
 alias trede="trans eng:de"
 alias k="kubectl"
 alias v="nvim"
+alias hx="helix"
 alias vimdiff='nvim -d'
 
 ## History
