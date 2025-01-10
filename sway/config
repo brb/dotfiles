@@ -23,7 +23,7 @@ set $menu fuzzel | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/brb/Downloads/wallpapers/2.jpeg center #000000
 
 exec wl-paste -t text --watch clipman store --no-persist
 
@@ -43,9 +43,9 @@ output eDP-1 scale 1.2
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock-custom' \
+         timeout 300 'swaylock' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock-custom'
+         before-sleep 'swaylock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -218,7 +218,7 @@ bindsym $mod+r mode "resize"
 
 # Custom bindings
 
-bindsym $mod+p exec "swaylock-custom"
+bindsym $mod+p exec "swaylock"
 bindsym $mod+o exec "passmenu"
 
 #
