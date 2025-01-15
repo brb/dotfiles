@@ -1,2 +1,9 @@
 [editor]
 bufferline = "always"
+auto-pairs = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.file-picker]
+hidden = false
