@@ -73,14 +73,14 @@ gch() {
 gg() {
     local tmp=$(git grep -n --color=always "$1" | fzf --ansi)
     if [ ! -z "$tmp" ]; then
-        nvim +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
+        helix +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
     fi
 }
 
 ggi() {
     local tmp=$(git grep -i -n --color=always "$1" | fzf --ansi)
     if [ ! -z "$tmp" ]; then
-        nvim +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
+        helix +$(echo $tmp | cut -d: -f2) $(echo $tmp | cut -d: -f1)
     fi
 }
 
