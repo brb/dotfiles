@@ -1,3 +1,5 @@
+theme = "everforest_dark"
+
 [editor]
 bufferline = "always"
 auto-pairs = false
@@ -7,6 +9,9 @@ enable = true
 
 [editor.file-picker]
 hidden = false
+
+[editor.whitespace]
+render = "all"
 
 [keys.normal]
 C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E tig blame TODO"

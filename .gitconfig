@@ -10,6 +10,7 @@
     default = current
 [core]
     editor = nvim
+    excludesfile = /home/brb/.gitignore
 [sendemail]
     smtpEncryption = tls
     smtpServer = smtp.fastmail.com

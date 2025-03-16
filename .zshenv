@@ -1,5 +1,6 @@
 export GOPATH=$HOME/sandbox/gopath
 export PATH="$PATH:$GOPATH/bin:$HOME/sandbox/bin:$HOME/sandbox/dotfiles/bin:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
+export PATH="$PATH:/opt/ltex-ls/ltex-ls-plus-18.4.0/bin"
 
 export EDITOR=nvim
 export TERMINAL=alacritty
