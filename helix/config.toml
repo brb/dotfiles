@@ -1,8 +1,9 @@
-theme = "everforest_dark"
+theme = "acme"
 
 [editor]
 bufferline = "always"
 auto-pairs = false
+cursorline = true
 
 [editor.soft-wrap]
 enable = true
